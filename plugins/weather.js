@@ -24,7 +24,7 @@ Asena.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, usage: '.we
 		'*ℹ ' + Lang.DESC +':* ```' + json.weather[0].description + '```\n' +
 		'*☀ ' + Lang.HUMI +':* ```%' + json.main.humidity + '```\n' + 
 		'*💨 ' + Lang.WIND +':* ```' + json.wind.speed + 'm/s```\n' + 
-		'*☁ ' + Lang.CLOUD +':* ```%' + json.clouds.all + '```\n');
+		'*☁ ' + Lang.CLOUD +':* ```%' + json.clouds.all + '```');
 	} catch {
 		return await message.reply(Lang.NOT_FOUND);
 	}

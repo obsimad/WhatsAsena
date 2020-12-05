@@ -3,58 +3,61 @@
     "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp.",
     "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
     "keywords": ["whatsapp", "userbot", "Asena"],
-    "repository": "https://github.com/Quiec/WhatsAsena",
-    "website":   "https://quiec.tech",
-    "success_url": "https://t.me/AsenaSupport",
+    "repository": "https://github.com/obsimad/WhatsAsena",
     "stack": "container",
     "env": {
         "ASENA_SESSION": {
-            "description": "Qr.Js ile oluşturduğunuz özel session kodu.",
+            "description": "Session code you created with qr.js.",
             "required": true
         },
         "SUDO": {
-            "description": "Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
+            "description": "Sudo mode; Your number must be in international format. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
             "required": false
         },
         "LANGUAGE": {
-            "description": "Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml, Hindi => HI, Indonesia => IN, Español => ES",
+            "description": "The language of the bot. English => EN, Azerbaijani => AZ, Turkish => TR, Malayalam => ML, Hindi => HI, Indonesia => IN,  Español => ES",
             "required": true,
-            "value": "TR"
+            "value": "EN"
+        },
+        "TZ": {
+            "description": "Setup your TimeZone.",
+            "required": true,
+            "value": "Asia/Kolkata"
         },
         "HANDLERS": {
-            "description": "Komutlar için.",
+            "description": "Command Handler.",
             "required": true,
             "value": "^[.!;]"
         },
         "SEND_READ": {
-            "description": "Görüldü atmak istiyorsanız true yazın.",
+            "description": "If you want to omit seen, set this to true. ",
             "required": true,
             "value": "true"
         },
         "HEROKU": {
-            "description": "Herokuda çalışıyorsa true yazın.",
+            "description": "If it is running in Heroku, set this to true.",
             "required": true,
             "value": "true"
         },
         "HEROKU_API_KEY": {
-            "description": "Herokuda API Keyiniz. Heroku API Key.",
+            "description": "Heroku API Key get it from https://dashboard.heroku.com/account",
             "required": true
         },
         "HEROKU_APP_NAME": {
-            "description": "Herokuda uygulama adı. Heroku APP Name.",
+            "description": "The Heroku App Name you setup",
             "required": true
         },
         "DEBUG": {
-            "description": "Geliştiricilere özeldir.",
+            "description": "For additional info useful for developers",
             "required": true,
             "value": "false"
         },
         "REMOVE_BG_API_KEY": {
-            "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
+            "description": "Needed For removing the background of photos. Get it from https://remove.bg",
             "required": false
         },
         "NO_ONLINE": {
-            "description": "Çevrimiçi görünmek istemiyorsanız true yazın.",
+            "description": "If you don't want to appear online, set this to true.",
             "required": false,
             "value": "true"
         },
